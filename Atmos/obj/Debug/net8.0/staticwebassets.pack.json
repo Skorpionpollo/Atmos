@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Atmos.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Atmos.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Atmos.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Atmos.props",
+      "PackagePath": "build\\Atmos.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Atmos.props",
+      "PackagePath": "buildMultiTargeting\\Atmos.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Atmos.props",
+      "PackagePath": "buildTransitive\\Atmos.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

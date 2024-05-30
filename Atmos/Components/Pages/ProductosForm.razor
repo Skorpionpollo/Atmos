@@ -1,0 +1,111 @@
+﻿@page "/productos/nuevo"
+@page "/productos/editar/{Id:int}"
+@rendermode InteractiveServer
+@inject NavigationManager _navigator
+@inject IRepositorioProductos _repositorio
+@inject IRepositorioMarcas _repositorioMarcas
+
+<h2>@_mensaje</h2>
+<EditForm Model="_producto" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="row mb-3">
+        <label for="txtNombre" class="col-2 col-form-label">Sabor</label>
+        <div class="col-10">
+            <InputText id="txtNombre" class="form-control" @bind-Value="_producto.Nombre" />
+            <ValidationMessage For="()=>_producto.Nombre"/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtDescripcion" class="col-2 col-form-label">Descripción</label>
+        <div class="col-10">
+            <InputText id="txtDescripcion" class="form-control" @bind-Value="_producto.Descripcion" />
+            <ValidationMessage For="()=>_producto.Descripcion" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtPrecio" class="col-2 col-form-label">Precio</label>
+        <div class="col-10">
+            <InputNumber id="txtPrecio" class="form-control" @bind-Value="_producto.Precio" />
+            <ValidationMessage For="()=>_producto.Precio" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtStock" class="col-2 col-form-label">Stock</label>
+        <div class="col-10">
+            <InputNumber id="txtStock" class="form-control" @bind-Value="_producto.Stock" />
+            <ValidationMessage For="()=>_producto.Stock" />
+        </div>
+        <div class="row mb-3">
+            <label for="marcaSelect" class="col-2 col-form-label">Marca</label>
+            <div class="col-10">
+                <InputSelect id="marcaSelect" class="form-control" @bind-Value="_producto.MarcasId">
+                    <option value="0" disabled>Seleccione una marca...</option>
+                    @foreach (var marca in _marcas)
+                    {
+                        <option value="@marca.Id">@marca.Nombre</option>
+                    }
+                </InputSelect>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" disabled="@isSaving">Guardar</button>
+    <button class="btn btn-danger ms-3" @onclick="Cancelar">Cancelar</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private string _mensaje = "";
+    private Producto _producto = new Producto();
+    private bool isSaving = false;
+    private List<Marca> _marcas = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _marcas = await _repositorioMarcas.GetAll();
+        if (Id != 0)
+        {
+            _producto = await _repositorio.Get(Id) ?? new Producto();
+            _mensaje = "Modificar Producto";
+        }
+        else
+        {
+            _mensaje = "Agregar Nuevo Producto";
+        }
+    }
+
+    private async Task Guardar()
+    {
+        if (_producto != null)
+        {
+            isSaving = true;
+            try
+            {
+                if (Id > 0)
+                {
+                    await _repositorio.Update(Id, _producto);
+                }
+                else
+                {
+                    await _repositorio.Add(_producto);
+                }
+                _navigator.NavigateTo("/productos");
+            }
+            catch (Exception ex)
+            {
+                // Registrar o manejar la excepción según sea necesario
+                Console.Error.WriteLine($"Error al guardar el producto: {ex.Message}");
+            }
+            finally
+            {
+                isSaving = false;
+            }
+        }
+    }
+
+    private void Cancelar()
+    {
+        _navigator.NavigateTo("/productos");
+    }
+}

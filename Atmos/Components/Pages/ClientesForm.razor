@@ -1,0 +1,74 @@
+﻿@page "/clientes/nuevo"
+@page "/clientes/editar/{Id:int}"
+@rendermode InteractiveServer
+@inject NavigationManager _navigator;
+@inject IRepositorioClientes _repositorio;
+
+<h2>@_mensaje</h2>
+<EditForm Model="_cliente" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+    <div class="row mb-3">
+        <label for="txtNombre" class="col-2 col-form-label">Nombre</label>
+        <div class="col-10">
+            <InputText id="txtNombre" class="form-control" @bind-Value="_cliente.Nombre" />
+            <ValidationMessage For="()=>_cliente.Nombre" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtCorreo" class="col-2 col-form-label">Correo</label>
+        <div class="col-10">
+            <InputText id="txtCorreo" class="form-control" @bind-Value="_cliente.Correo" />
+            <ValidationMessage For="()=>_cliente.Correo" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtTelefono" class="col-2 col-form-label">Telefono</label>
+        <div class="col-10">
+            <InputText id="txtTelefono" class="form-control" @bind-Value="_cliente.Telefono" />
+            <ValidationMessage For="()=>_cliente.Telefono" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button class="btn btn-danger ms-3" @onclick="Cancelar" @onclick:preventDefault>Cancelar</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private string _mensaje = "";
+    private Cliente? _cliente = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id > 0)
+        {
+            _cliente = await _repositorio.Get(Id);
+            _mensaje = "Modificar Cliente";
+        }
+        else
+        {
+            _mensaje = "Agregar Nuevo Cliente";
+        }
+    }
+
+    private async void Guardar()
+    {
+        if (_cliente is not null)
+        {
+            if (Id > 0)
+            {
+                await _repositorio.Update(Id, _cliente);
+            }
+            else
+            {
+                await _repositorio.Add(_cliente);
+            }
+        }
+        Cancelar();
+    }
+
+    private void Cancelar()
+    {
+        _navigator.NavigateTo("/clientes");
+    }
+}

@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|C:\\Users\\Colibecas\\source\\repos\\Atmos\\atmos\\components\\pages\\productos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|solutionrelative:atmos\\components\\pages\\productos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|c:\\users\\colibecas\\source\\repos\\atmos\\atmos\\components\\pages\\productosform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|solutionrelative:atmos\\components\\pages\\productosform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|c:\\users\\colibecas\\source\\repos\\atmos\\atmos\\components\\pages\\productos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|solutionrelative:atmos\\components\\pages\\productos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|c:\\users\\colibecas\\source\\repos\\atmos\\atmos\\components\\pages\\clientesform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|C:\\Users\\Colibecas\\source\\repos\\Atmos\\atmos\\components\\pages\\clientesform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|solutionrelative:atmos\\components\\pages\\clientesform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|c:\\users\\colibecas\\source\\repos\\atmos\\atmos\\components\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|C:\\Users\\Colibecas\\source\\repos\\Atmos\\atmos\\components\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C58E5B3A-D190-43D8-BA19-B49540F8E838}|Atmos\\Atmos.csproj|solutionrelative:atmos\\components\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -26,30 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductosForm.razor",
               "DocumentMoniker": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\Components\\Pages\\ProductosForm.razor",
               "RelativeDocumentMoniker": "Atmos\\Components\\Pages\\ProductosForm.razor",
               "ToolTip": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\Components\\Pages\\ProductosForm.razor",
               "RelativeToolTip": "Atmos\\Components\\Pages\\ProductosForm.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAKAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAADIAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-30T01:40:43.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Productos.razor",
               "DocumentMoniker": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\Components\\Pages\\Productos.razor",
               "RelativeDocumentMoniker": "Atmos\\Components\\Pages\\Productos.razor",
               "ToolTip": "C:\\Users\\Colibecas\\source\\repos\\Atmos\\Atmos\\Components\\Pages\\Productos.razor",
               "RelativeToolTip": "Atmos\\Components\\Pages\\Productos.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-30T01:40:14.462Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "Atmos\\Components\\Pages\\Clientes.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T01:36:21.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T01:36:21.755Z"
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "RelativeToolTip": "Atmos\\Components\\Pages\\ClientesForm.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T01:13:09.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T01:13:09.662Z"
             }
           ]
         }
